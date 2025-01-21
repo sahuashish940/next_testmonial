@@ -9,6 +9,7 @@ const TestimonialSchema = new mongoose.Schema({
   location: { type: String, required: true },
   profileImage: { type: String, required: true }, // Ensure this is a string URL or path
   companyLogo: String,
+  isVerified : { type : bool , default : false }
 });
 
 export default mongoose.models.Testimonial || mongoose.model('Testimonial', TestimonialSchema);
